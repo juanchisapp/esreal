@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0b1220" />
+  <title>EsReal — Detector anti-estafa</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="phone">
+    <header class="app-header">
+      <div class="brand">
+        <span class="logo">🛡️</span>
+        <div class="brand-text">
+          <h1>EsReal</h1>
+          <p>¿Es seguro o es estafa?</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="app-body">
+      <div class="tabs" role="tablist">
+        <button class="tab active" data-type="link" role="tab">🔗 Link</button>
+        <button class="tab" data-type="mensaje" role="tab">💬 Mensaje</button>
+        <button class="tab" data-type="telefono" role="tab">📞 Teléfono</button>
+      </div>
+
+      <p class="hint" id="hint">Pega aquí el enlace sospechoso que te llegó.</p>
+
+      <textarea
+        id="input"
+        class="input"
+        placeholder="Pega aquí lo que te llegó…"
+        rows="4"
+        autocomplete="off"
+        spellcheck="false"></textarea>
+
+      <button class="check-btn" id="checkBtn">
+        <span class="check-btn-icon">🔍</span>
+        ¿Es seguro? Revisar ahora
+      </button>
+
+      <div class="examples">
+        <p class="examples-title">Probar con un ejemplo:</p>
+        <div class="example-chips" id="exampleChips"></div>
+      </div>
+
+      <section class="result hidden" id="result" aria-live="polite"></section>
+    </main>
+
+    <footer class="app-footer">
+      <p>EsReal te orienta, no reemplaza tu criterio. Ante la duda, nunca envíes dinero ni datos.</p>
+      <p class="proto-tag">Prototipo · v0.1</p>
+    </footer>
+  </div>
+
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
